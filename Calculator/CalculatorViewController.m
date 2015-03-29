@@ -125,22 +125,18 @@
             
         case 1: // add
             self.accum += self.arg;
-            self.arg = 0;
             break;
             
         case 2: // subtract
             self.accum -= self.arg;
-            self.arg = 0;
             break;
             
         case 3: // multiply
             self.accum *= self.arg;
-            self.arg = 0;
             break;
             
         case 4: // divide
             self.accum /= self.arg;
-            self.arg = 0;
             break;
             
         default:
@@ -153,10 +149,8 @@
 
 - (IBAction)handleButtonPlus:(id)sender
 {
-    if (self.lastOpcode == 0) {
+    if (self.lastOpcode==0) {
         self.accum = self.arg;
-    } else {
-        self.accum += self.arg;
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
@@ -165,10 +159,8 @@
 
 - (IBAction)handleButtonMinus:(id)sender
 {
-    if (self.lastOpcode == 0) {
+    if (self.lastOpcode==0) {
         self.accum = self.arg;
-    } else {
-        self.accum -= self.arg;
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
@@ -177,10 +169,8 @@
 
 - (IBAction)handleButtonMultiply:(id)sender
 {
-    if (self.lastOpcode == 0) {
+    if (self.lastOpcode==0) {
         self.accum = self.arg;
-    } else {
-        self.accum *= self.arg;
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
@@ -189,10 +179,8 @@
 
 - (IBAction)handleButtonDivide:(id)sender
 {
-    if (self.lastOpcode == 0) {
+    if (self.lastOpcode==0) {
         self.accum = self.arg;
-    } else {
-        self.accum /= self.arg;
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
