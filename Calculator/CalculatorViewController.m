@@ -31,6 +31,7 @@
 @property (nonatomic) float arg;
 @property (nonatomic) float accum;
 @property (nonatomic) NSInteger lastOpcode;
+@property (nonatomic) bool lastEval;
 
 @end
 
@@ -113,9 +114,16 @@
     self.accum = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
     self.lastOpcode = 0;
+    self.lastEval = false;
 }
 
 - (IBAction)handleButtonEval:(id)sender
+{
+    [self doEval];
+}
+
+
+- (void) doEval
 {
     switch (self.lastOpcode) {
         case 0: // clear entry
@@ -144,6 +152,7 @@
             break;
     }
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.lastEval = true;
 }
 
 
@@ -151,40 +160,52 @@
 {
     if (self.lastOpcode==0) {
         self.accum = self.arg;
+    } else if (!self.lastEval) {
+        [self doEval];
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
     self.lastOpcode = 1;
+    self.lastEval = false;
 }
 
 - (IBAction)handleButtonMinus:(id)sender
 {
     if (self.lastOpcode==0) {
         self.accum = self.arg;
+    } else if (!self.lastEval) {
+        [self doEval];
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
     self.lastOpcode = 2;
+    self.lastEval = false;
 }
 
 - (IBAction)handleButtonMultiply:(id)sender
 {
     if (self.lastOpcode==0) {
         self.accum = self.arg;
+    } else if (!self.lastEval) {
+        [self doEval];
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
     self.lastOpcode = 3;
+    self.lastEval = false;
 }
 
 - (IBAction)handleButtonDivide:(id)sender
 {
     if (self.lastOpcode==0) {
         self.accum = self.arg;
+    } else if (!self.lastEval) {
+        [self doEval];
     }
     self.arg = 0;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
     self.lastOpcode = 4;
+    self.lastEval = false;
 }
 
 - (void)viewDidLoad {
