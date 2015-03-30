@@ -11,22 +11,6 @@
 @interface CalculatorViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *calcDisplay;
-@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
-@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
-@property (weak, nonatomic) IBOutlet UIButton *buttonThree;
-@property (weak, nonatomic) IBOutlet UIButton *buttonFour;
-@property (weak, nonatomic) IBOutlet UIButton *buttonFive;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSix;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSeven;
-@property (weak, nonatomic) IBOutlet UIButton *buttonEight;
-@property (weak, nonatomic) IBOutlet UIButton *buttonNine;
-@property (weak, nonatomic) IBOutlet UIButton *buttonZero;
-@property (weak, nonatomic) IBOutlet UIButton *buttonPlus;
-@property (weak, nonatomic) IBOutlet UIButton *buttonMinus;
-@property (weak, nonatomic) IBOutlet UIButton *buttonMultiply;
-@property (weak, nonatomic) IBOutlet UIButton *buttonDivide;
-@property (weak, nonatomic) IBOutlet UIButton *buttonClear;
-@property (weak, nonatomic) IBOutlet UIButton *buttonEval;
 
 @property (nonatomic) long double arg;
 @property (nonatomic) long double accum;

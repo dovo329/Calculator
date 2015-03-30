@@ -6,22 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController">
             <connections>
-                <outlet property="buttonClear" destination="FOu-Bq-oRB" id="hhK-Tv-Ebl"/>
-                <outlet property="buttonDivide" destination="3JC-24-wdY" id="KKZ-F1-rWT"/>
-                <outlet property="buttonEight" destination="wLT-p6-fpn" id="436-Eh-l3M"/>
-                <outlet property="buttonEval" destination="OxS-xa-fDx" id="Pbk-ov-h0k"/>
-                <outlet property="buttonFive" destination="rke-C4-vBc" id="2XZ-v5-WLV"/>
-                <outlet property="buttonFour" destination="1Bs-uL-GWu" id="xDZ-yY-6HA"/>
-                <outlet property="buttonMinus" destination="bnh-dL-luO" id="6kN-eZ-yaZ"/>
-                <outlet property="buttonMultiply" destination="Uq4-XV-mgI" id="kqB-dT-zQe"/>
-                <outlet property="buttonNine" destination="6Hs-LC-whi" id="5CB-sy-k2A"/>
-                <outlet property="buttonOne" destination="2hy-ZF-DEc" id="Feh-Qr-qD9"/>
-                <outlet property="buttonPlus" destination="jT3-d1-90Z" id="kxq-pE-Si6"/>
-                <outlet property="buttonSeven" destination="eaE-kT-Gha" id="REJ-wE-dWd"/>
-                <outlet property="buttonSix" destination="mk5-dS-gvK" id="GHQ-qV-R6f"/>
-                <outlet property="buttonThree" destination="aC1-Ce-r93" id="OlL-Md-gBu"/>
-                <outlet property="buttonTwo" destination="cTq-kG-rRT" id="eCe-LI-pUy"/>
-                <outlet property="buttonZero" destination="8xV-E7-5CQ" id="l9e-jz-0wm"/>
                 <outlet property="calcDisplay" destination="DX8-yF-z3l" id="bu3-hy-D0X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,266 +15,186 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX8-yF-z3l" userLabel="calcDisplay">
-                    <rect key="frame" x="8" y="29" width="304" height="74"/>
-                    <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hy-ZF-DEc" userLabel="buttonOne">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xV-E7-5CQ" userLabel="buttonZero">
+                    <rect key="frame" x="10" y="390" width="64" height="64"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="0">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleButtonZero:" destination="-1" eventType="touchDown" id="cik-Qx-nKs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hy-ZF-DEc" userLabel="buttonOne">
                     <rect key="frame" x="9" y="121" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                    <state key="normal" title="1">
+                        <color key="titleColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonOne:" destination="-1" eventType="touchDown" id="oe1-Kb-d1W"/>
+                        <action selector="handleButtonOne:" destination="-1" eventType="touchDown" id="InC-u8-CQg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-kG-rRT" userLabel="buttonTwo">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-kG-rRT" userLabel="buttonTwo">
                     <rect key="frame" x="89" y="121" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="2">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonTwo:" destination="-1" eventType="touchDown" id="haH-CM-LCU"/>
+                        <action selector="handleButtonTwo:" destination="-1" eventType="touchDown" id="JOM-AK-bjM"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-Ce-r93" userLabel="buttonThree">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-Ce-r93" userLabel="buttonThree">
                     <rect key="frame" x="168" y="121" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="3">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonThree:" destination="-1" eventType="touchDown" id="s3F-9O-nbu"/>
+                        <action selector="handleButtonThree:" destination="-1" eventType="touchDown" id="S6W-6f-Gz9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-uL-GWu" userLabel="buttonFour">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-uL-GWu" userLabel="buttonFour">
                     <rect key="frame" x="9" y="210" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="4">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonFour:" destination="-1" eventType="touchDown" id="XU5-Rt-HYc"/>
+                        <action selector="handleButtonFour:" destination="-1" eventType="touchDown" id="KaD-g7-8dt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rke-C4-vBc" userLabel="buttonFive">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rke-C4-vBc" userLabel="buttonFive">
                     <rect key="frame" x="89" y="210" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="5">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonFive:" destination="-1" eventType="touchDown" id="fUk-vj-bre"/>
+                        <action selector="handleButtonFive:" destination="-1" eventType="touchDown" id="vgI-gS-lpm"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-dS-gvK" userLabel="buttonSix">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-dS-gvK" userLabel="buttonSix">
                     <rect key="frame" x="168" y="210" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="6">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonSix:" destination="-1" eventType="touchDown" id="iBz-Sq-tpU"/>
+                        <action selector="handleButtonSix:" destination="-1" eventType="touchDown" id="BRk-hw-nnN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-kT-Gha" userLabel="buttonSeven">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-kT-Gha" userLabel="buttonSeven">
                     <rect key="frame" x="9" y="301" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="7">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonSeven:" destination="-1" eventType="touchDown" id="Kbc-m9-uCy"/>
+                        <action selector="handleButtonSeven:" destination="-1" eventType="touchDown" id="RDq-DK-1e1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-p6-fpn" userLabel="buttonEight">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-p6-fpn" userLabel="buttonEight">
                     <rect key="frame" x="89" y="301" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="8">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonEight:" destination="-1" eventType="touchDown" id="gYo-Vs-PoZ"/>
+                        <action selector="handleButtonEight:" destination="-1" eventType="touchDown" id="R43-Mx-4Jh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hs-LC-whi" userLabel="buttonNine">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hs-LC-whi" userLabel="buttonNine">
                     <rect key="frame" x="168" y="301" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="9">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonNine:" destination="-1" eventType="touchDown" id="mzK-nt-c6I"/>
+                        <action selector="handleButtonNine:" destination="-1" eventType="touchDown" id="YAZ-fV-nR0"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xV-E7-5CQ" userLabel="buttonZero">
-                    <rect key="frame" x="10" y="390" width="64" height="64"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
-                    </state>
-                    <connections>
-                        <action selector="handleButtonZero:" destination="-1" eventType="touchDown" id="faM-oJ-DZm"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-xa-fDx" userLabel="buttonEval">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-xa-fDx" userLabel="buttonEval">
                     <rect key="frame" x="168" y="390" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="CE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonEval:" destination="-1" eventType="touchDown" id="2UO-hc-PCO"/>
+                        <action selector="handleButtonClear:" destination="-1" eventType="touchDown" id="mXx-QS-cfI"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-Bq-oRB" userLabel="buttonClear">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-Bq-oRB" userLabel="buttonClear">
                     <rect key="frame" x="89" y="390" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="=">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonClear:" destination="-1" eventType="touchDown" id="WvO-jn-fmH"/>
+                        <action selector="handleButtonEval:" destination="-1" eventType="touchDown" id="51W-2p-uyI"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ba-Zn-jba" userLabel="labelOne">
-                    <rect key="frame" x="9" y="121" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84K-rL-Hb8" userLabel="labelTwo">
-                    <rect key="frame" x="89" y="121" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlc-fr-SPm" userLabel="labelThree">
-                    <rect key="frame" x="168" y="121" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-8h-gfm" userLabel="labelFour">
-                    <rect key="frame" x="9" y="210" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFL-9K-399" userLabel="labelFive">
-                    <rect key="frame" x="89" y="210" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z40-n2-zt4" userLabel="labelSix">
-                    <rect key="frame" x="168" y="210" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df8-37-RMX" userLabel="labelSeven">
-                    <rect key="frame" x="10" y="301" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2c-Jo-MBh" userLabel="labelEight">
-                    <rect key="frame" x="90" y="302" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzz-nR-e2M" userLabel="labelNine">
-                    <rect key="frame" x="168" y="302" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8C-sO-QDS" userLabel="labelZero">
-                    <rect key="frame" x="10" y="390" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-J2-4nQ" userLabel="labelClear">
-                    <rect key="frame" x="89" y="390" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpc-f6-lwZ" userLabel="labelEval">
-                    <rect key="frame" x="168" y="390" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jT3-d1-90Z" userLabel="buttonPlus">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT3-d1-90Z" userLabel="buttonPlus">
                     <rect key="frame" x="248" y="120" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonPlus:" destination="-1" eventType="touchDown" id="XbZ-Fz-XlU"/>
+                        <action selector="handleButtonPlus:" destination="-1" eventType="touchDown" id="HCE-i2-fSL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-dL-luO" userLabel="buttonMinus">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-dL-luO" userLabel="buttonMinus">
                     <rect key="frame" x="248" y="209" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonMinus:" destination="-1" eventType="touchDown" id="pzC-Dr-oWC"/>
+                        <action selector="handleButtonMinus:" destination="-1" eventType="touchDown" id="tYQ-43-2NQ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq4-XV-mgI" userLabel="buttonMultiply">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq4-XV-mgI" userLabel="buttonMultiply">
                     <rect key="frame" x="248" y="301" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonMultiply:" destination="-1" eventType="touchDown" id="qw6-z9-Frh"/>
+                        <action selector="handleButtonMultiply:" destination="-1" eventType="touchDown" id="1Tu-FW-8XE"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-24-wdY" userLabel="buttonDivide">
                     <rect key="frame" x="248" y="389" width="64" height="64"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="">
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="/">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="handleButtonDivide:" destination="-1" eventType="touchDown" id="QxT-VX-Pj1"/>
+                        <action selector="handleButtonDivide:" destination="-1" eventType="touchDown" id="Tav-o8-opW"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCW-J9-iRY" userLabel="labelPlus">
-                    <rect key="frame" x="248" y="120" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-vX-iE1" userLabel="labelMinus">
-                    <rect key="frame" x="248" y="209" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL8-FJ-JUM" userLabel="labelMultiply">
-                    <rect key="frame" x="248" y="300" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F2-BR-ysb" userLabel="labelDivide">
-                    <rect key="frame" x="248" y="389" width="64" height="64"/>
-                    <fontDescription key="fontDescription" name="Krungthep" family="Krungthep" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX8-yF-z3l" userLabel="calcDisplay">
+                    <rect key="frame" x="8" y="29" width="304" height="74"/>
+                    <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
