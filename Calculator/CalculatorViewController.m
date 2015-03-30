@@ -28,8 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonClear;
 @property (weak, nonatomic) IBOutlet UIButton *buttonEval;
 
-@property (nonatomic) float arg;
-@property (nonatomic) float accum;
+@property (nonatomic) long double arg;
+@property (nonatomic) long double accum;
 @property (nonatomic) NSInteger lastOpcode;
 @property (nonatomic) bool lastEval;
 
@@ -47,7 +47,7 @@
     self.arg += 1;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonTwo:(id)sender
@@ -59,7 +59,7 @@
     self.arg += 2;
     
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonThree:(id)sender
@@ -71,7 +71,7 @@
     self.arg += 3;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonFour:(id)sender
@@ -83,7 +83,7 @@
     self.arg += 4;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonFive:(id)sender
@@ -95,7 +95,7 @@
     self.arg += 5;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonSix:(id)sender
@@ -107,7 +107,7 @@
     self.arg += 6;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonSeven:(id)sender
@@ -119,7 +119,7 @@
     self.arg += 7;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonEight:(id)sender
@@ -131,7 +131,7 @@
     self.arg += 8;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonNine:(id)sender
@@ -143,7 +143,7 @@
     self.arg += 9;
     
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonZero:(id)sender
@@ -155,13 +155,13 @@
     self.arg += 0;
 
     self.lastEval = false;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 }
 
 - (IBAction)handleButtonClear:(id)sender
 {
     [self doClear];
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.arg];
 
 }
 
@@ -209,7 +209,7 @@
             NSLog(@"Invalid lastOpcode!");
             break;
     }
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.accum];
     self.lastEval = true;
 }
 
@@ -222,7 +222,7 @@
         [self doEval];
     }
     self.arg = 0;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.accum];
     self.lastOpcode = 1;
     self.lastEval = false;
 }
@@ -235,7 +235,7 @@
         [self doEval];
     }
     self.arg = 0;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.accum];
     self.lastOpcode = 2;
     self.lastEval = false;
 }
@@ -248,7 +248,7 @@
         [self doEval];
     }
     self.arg = 0;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.accum];
     self.lastOpcode = 3;
     self.lastEval = false;
 }
@@ -261,7 +261,7 @@
         [self doEval];
     }
     self.arg = 0;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.accum];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%.8Lg", self.accum];
     self.lastOpcode = 4;
     self.lastEval = false;
 }
