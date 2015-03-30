@@ -40,82 +40,140 @@
 
 - (IBAction)handleButtonOne:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 1;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonTwo:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 2;
+    
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonThree:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 3;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonFour:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 4;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonFive:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 5;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonSix:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 6;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonSeven:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 7;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonEight:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 8;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonNine:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 9;
+    
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonZero:(id)sender
 {
+    if (self.lastEval) {
+        [self doClear];
+    }
     self.arg *= 10;
     self.arg += 0;
+
+    self.lastEval = false;
     self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
 }
 
 - (IBAction)handleButtonClear:(id)sender
 {
+    [self doClear];
+    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
+
+}
+
+
+- (void)doClear
+{
     self.arg = 0;
     self.accum = 0;
-    self.calcDisplay.text = [NSString stringWithFormat:@"%f", self.arg];
     self.lastOpcode = 0;
     self.lastEval = false;
 }
+
 
 - (IBAction)handleButtonEval:(id)sender
 {
