@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A573561C1AD5E93D00CF319C /* brushed-metal-texture-600x400.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A57356191AD5E93D00CF319C /* brushed-metal-texture-600x400.jpg */; };
+		A573561D1AD5E93D00CF319C /* black-metal-mesh-with-round-holes-texture-600x400.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A573561A1AD5E93D00CF319C /* black-metal-mesh-with-round-holes-texture-600x400.jpg */; };
+		A573561E1AD5E93D00CF319C /* marble.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A573561B1AD5E93D00CF319C /* marble.jpg */; };
 		A5E2B1FD1AC772890004DA11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B1FC1AC772890004DA11 /* main.m */; };
 		A5E2B2001AC772890004DA11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B1FF1AC772890004DA11 /* AppDelegate.m */; };
 		A5E2B2061AC772890004DA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E2B2041AC772890004DA11 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A57356191AD5E93D00CF319C /* brushed-metal-texture-600x400.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "brushed-metal-texture-600x400.jpg"; sourceTree = "<group>"; };
+		A573561A1AD5E93D00CF319C /* black-metal-mesh-with-round-holes-texture-600x400.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-metal-mesh-with-round-holes-texture-600x400.jpg"; sourceTree = "<group>"; };
+		A573561B1AD5E93D00CF319C /* marble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marble.jpg; sourceTree = "<group>"; };
 		A5E2B1F71AC772890004DA11 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E2B1FB1AC772890004DA11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E2B1FC1AC772890004DA11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 		A5E2B1F91AC772890004DA11 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A57356191AD5E93D00CF319C /* brushed-metal-texture-600x400.jpg */,
+				A573561A1AD5E93D00CF319C /* black-metal-mesh-with-round-holes-texture-600x400.jpg */,
+				A573561B1AD5E93D00CF319C /* marble.jpg */,
 				A5E2B1FE1AC772890004DA11 /* AppDelegate.h */,
 				A5E2B1FF1AC772890004DA11 /* AppDelegate.m */,
 				A5E2B2041AC772890004DA11 /* Main.storyboard */,
@@ -204,8 +213,11 @@
 			files = (
 				A5E2B2061AC772890004DA11 /* Main.storyboard in Resources */,
 				A5E2B20B1AC772890004DA11 /* LaunchScreen.xib in Resources */,
+				A573561D1AD5E93D00CF319C /* black-metal-mesh-with-round-holes-texture-600x400.jpg in Resources */,
 				A5E2B2291AC7730A0004DA11 /* CalculatorViewController.xib in Resources */,
+				A573561E1AD5E93D00CF319C /* marble.jpg in Resources */,
 				A5E2B2081AC772890004DA11 /* Images.xcassets in Resources */,
+				A573561C1AD5E93D00CF319C /* brushed-metal-texture-600x400.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +430,7 @@
 				A5E2B21C1AC772890004DA11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5E2B21D1AC772890004DA11 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				A5E2B21F1AC772890004DA11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
